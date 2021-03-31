@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/tylerkurahashi/Study_Record_App/issues"
   },
-  "homepage": "https://github.com/tylerkurahashi/Study_Record_App#readme"
+  "homepage": "https://github.com/tylerkurahashi/Study_Record_App#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "mongoose": "^5.12.2",
+    "node": "^15.12.0"
+  }
 }

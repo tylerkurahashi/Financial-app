@@ -3,3 +3,38 @@
     margin: 0;
     padding: 0;
 }
+
+.container {
+    width: 70%;
+}
+
+// HEADER
+.header__inner {
+    position: relative;
+    height: 50px;
+    background-color: rgb(32, 56, 110);
+    margin: auto;
+    margin-bottom: 20px;
+    color: aliceblue;
+    text-align: center;
+
+    h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+
+}
+
+// MAIN SECTION
+
+
+canvas {
+    display: block;
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    
+}

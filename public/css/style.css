@@ -2,3 +2,32 @@
   margin: 0;
   padding: 0;
 }
+
+.container {
+  width: 70%;
+}
+
+.header__inner {
+  position: relative;
+  height: 50px;
+  background-color: #20386e;
+  margin: auto;
+  margin-bottom: 20px;
+  color: aliceblue;
+  text-align: center;
+}
+
+.header__inner h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+}

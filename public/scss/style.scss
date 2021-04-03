@@ -29,12 +29,37 @@
 }
 
 // MAIN SECTION
-
-
-canvas {
-    display: block;
+.main__inner {
     margin: auto;
-    height: 300px;
-    width: 300px;
+
+    .main__flex__contents {
+        display: flex;
+        margin-bottom: 20px;
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            border-spacing: 30px 0px;
+            text-align: center;
     
+            tr {
+                th:nth-child(2) {
+                    width: 200px;
+                }
+            }
+        }
+    
+        canvas {
+            display: block;
+            margin: auto;
+            height: 300px;
+            width: 300px;
+            
+        }
+    }
+
+    .main__contents {
+        text-align: center;
+    }
 }
+

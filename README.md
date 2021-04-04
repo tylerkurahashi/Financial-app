@@ -1,1 +1,1 @@
-# Study_Record_App
+# Financial-app

@@ -2,10 +2,10 @@
     <div class="main__flex__contents">
         <table>
             <tr>
-                <th>日付</th>
-                <th>内容</th>
-                <th>カテゴリ</th>
-                <th>値段</th>
+                <th>Date</th>
+                <th>Content</th>
+                <th>Category</th>
+                <th>Price</th>
             </tr>
             <% for (let history of histories) { %> 
                 <tr>
@@ -19,7 +19,26 @@
         <canvas id="mycanvas"></canvas>
     </div>
     <div class="main__contents">
-        <h2>繰越金</h2>
-        <span>10000 ￥</span>
+        <div class="main__flex__calc">
+            <div class="main__flex__calc__elements">
+                <h2>収入</h2>
+                <span>10000 ￥</span>
+            </div>
+            <div class="main__flex__calc__elements">
+                <h2>-</h2>
+            </div>
+            <div class="main__flex__calc__elements">
+                <h2>支出</h2>
+                <span>10000 ￥</span>
+            </div>
+            <div class="main__flex__calc__elements">
+                <h2>-</h2>
+            </div>
+            <div class="main__flex__calc__elements">
+                <h2>繰越金</h2>
+                <span>10000 ￥</span>
+            </div>
+        </div>
+        
     </div>
 </section>

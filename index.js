@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const history = require('./Routes/history');
 
-mongoose.connect('mongodb://localhost:27017/finance-app', {
+mongoose.connect('mongodb://localhost:27017/finance', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,

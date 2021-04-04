@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Review = require('./review')
+// const Review = require('./review')
 const Schema = mongoose.Schema;
 
 const HistorySchema = new Schema({
@@ -10,14 +10,14 @@ const HistorySchema = new Schema({
     price: Number,
 });
 
-HistorySchema.post('findOneAndDelete', async function (doc) {
-    if (doc) {
-        await Review.deleteMany({
-            _id: {
-                $in: doc.reviews
-            }
-        })
-    }
-})
+// HistorySchema.post('findOneAndDelete', async function (doc) {
+//     if (doc) {
+//         await Review.deleteMany({
+//             _id: {
+//                 $in: doc.reviews
+//             }
+//         })
+//     }
+// })
 
 module.exports = mongoose.model('History', HistorySchema);

@@ -3,6 +3,8 @@ const path = require('path')
 const ejsMate = require('ejs-mate');
 const mongoose = require('mongoose');
 
+const history = require('./Routes/history');
+
 mongoose.connect('mongodb://localhost:27017/finance-app', {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -18,9 +20,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/', async(req, res) => {
-    res.render('home')
-});
+app.use('/', history)
 
 app.listen(3000, () => {
     console.log('Serving on 3000')

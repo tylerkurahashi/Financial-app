@@ -2,13 +2,14 @@ const mongoose = require('mongoose');
 // const Review = require('./review')
 const Schema = mongoose.Schema;
 
-const HistorySchema = new Schema({
+const SumSchema = new Schema({
     month: Number,
-    day: Number,
-    year: Number,
-    content: String,
-    category: String,
-    price: Number,
+    income: Number,
+    food: Number,
+    lifestyle: String,
+    daily: String,
+    others: Number,
+    savings: Number
 });
 
 // HistorySchema.post('findOneAndDelete', async function (doc) {
@@ -21,4 +22,4 @@ const HistorySchema = new Schema({
 //     }
 // })
 
-module.exports = mongoose.model('History', HistorySchema, 'finance');
+module.exports = mongoose.model('Sum', SumSchema, 'sum');

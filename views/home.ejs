@@ -11,6 +11,48 @@
     <%- include('./partial/main') %> 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-    <script src="/javascripts/pie_chart.js"></script>
+    <script>
+        // let priceDict = {}
+        // for (let history in histories) {
+        //     if (!(history.category in priceDict)) {
+        //         let cat = history.category
+        //         priceDict.category = cat
+        //     }
+        // }
+        let data = [
+    {
+     value: 400,
+     color:"#F7464A",
+     highlight: "#FF5A5E",
+     label: "Food"
+    },
+    {
+     value: 150,
+     color: "#46BFBD",
+     highlight: "#5AD3D1",
+     label: "Lifestyle"
+    },
+    {
+     value: 100,
+     color: "orange",
+     highlight: "#FFC870",
+     label: "Daily"
+    },
+    {
+     value: 100,
+     color: "gray",
+     highlight: "#FFC870",
+     label: "Others"
+    },
+    {
+    value:100,
+    color: "blue",
+    highlight: "#FD4853",
+    label: "Savings"
+    }
+    
+   ];
+   var myChart = new Chart(document.getElementById("mycanvas").getContext("2d")).Doughnut(data);
+    </script>
 </body>
 </html>

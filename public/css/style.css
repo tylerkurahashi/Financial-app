@@ -4,6 +4,10 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+body {
+  background-color: #fdf5ad;
+}
+
 .container {
   width: 100%;
 }
@@ -56,12 +60,12 @@
   margin: auto;
 }
 
-.main__inner .main__flex__contents {
+.main__inner .main__table__contents {
   display: block;
   margin-bottom: 20px;
 }
 
-.main__inner .main__flex__contents table {
+.main__inner .main__table__contents table {
   margin-left: auto;
   margin-right: auto;
   border-spacing: 10px 5px;
@@ -71,24 +75,64 @@
   table-layout: fixed;
 }
 
-.main__inner .main__flex__contents table tr th {
+.main__inner .main__table__contents table tr th {
   width: 40px;
 }
 
-.main__inner .main__flex__contents table tr th:nth-child(2) {
+.main__inner .main__table__contents table tr th:nth-child(2) {
   width: 100px;
 }
 
-.main__inner .main__flex__contents table tr td {
+.main__inner .main__table__contents table tr td {
   width: 40px;
   word-break: break-all;
 }
 
-.main__inner .main__flex__contents canvas {
+.main__inner .main__table__contents form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.main__inner .main__table__contents form .form-inputs {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main__inner .main__table__contents form .form-inputs input {
+  font-size: 10px;
+  width: 20px;
+}
+
+.main__inner .main__table__contents form .form-inputs select {
+  font-size: 10px;
+  width: 40px;
+}
+
+.main__inner .main__table__contents form .form-inputs:nth-child(2) input {
+  width: 80px;
+}
+
+.main__inner .main__table__contents form .form-inputs:nth-child(4) input {
+  width: 50px;
+}
+
+.main__inner .main__table__contents form .form-button button {
+  font-size: 10px;
+}
+
+.main__inner .main__table__contents canvas {
   display: block;
   margin: auto;
   height: 150px;
   width: 150px;
+  margin-bottom: 20px;
 }
 
 .main__inner .main__contents {

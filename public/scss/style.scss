@@ -5,6 +5,10 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+body {
+    background-color: rgb(253, 245, 173);
+}
+
 .container {
     width: 100%;
 }
@@ -57,7 +61,7 @@
 .main__inner {
     margin: auto;
 
-    .main__flex__contents {
+    .main__table__contents {
         display: block;
         margin-bottom: 20px;
 
@@ -85,12 +89,51 @@
                 }
             }
         }
+
+        form {
+            display: flex;
+            font-size: 10px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+
+            .form-inputs {
+                justify-content: space-between;
+                
+                input {
+                    font-size: 10px;
+                    width: 20px;
+                }
+                select {
+                    font-size: 10px;
+                    width: 40px;
+                }
+            }
+            .form-inputs:nth-child(2) {
+                input {
+                    width: 80px;
+                }
+            }
+            .form-inputs:nth-child(4) {
+                input {
+                    width: 50px;
+                }
+            }
+
+            .form-button {
+                button {
+                    font-size: 10px;
+                }
+            }
+        }
     
         canvas {
             display: block;
             margin: auto;
             height: 150px;
             width: 150px;
+            margin-bottom: 20px;
             
         }
     }

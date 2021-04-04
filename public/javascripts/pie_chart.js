@@ -1,5 +1,5 @@
 // Mock Data
-var data = [
+let data = [
     {
      value: 300,
      color:"#F7464A",

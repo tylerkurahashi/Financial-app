@@ -3,6 +3,13 @@ const path = require('path')
 const ejsMate = require('ejs-mate');
 const mongoose = require('mongoose');
 
+mongoose.connect('mongodb://localhost:27017/finance-app', {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+});
+
 const app = express();
 
 app.engine('ejs', ejsMate)

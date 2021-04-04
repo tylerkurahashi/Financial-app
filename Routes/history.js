@@ -16,9 +16,11 @@ const validateHistory = (req, res, next) => {
     }
 }
 
-router.get('/', catchAsync(async (req, res) => {
-    const history = await History.find({});
-    res.render('home')
+router.get('/:month', catchAsync(async (req, res) => {
+    const month = req.params.month
+    const histories = await History.find({'month':month});
+    console.log(histories)
+    res.render('home', { month, histories })
 }));
 
 module.exports = router;

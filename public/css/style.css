@@ -25,6 +25,26 @@
           transform: translate(-50%, -50%);
 }
 
+.header__inner a:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.header__inner a:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-decoration: none;
+  color: aliceblue;
+}
+
 .main__inner {
   margin: auto;
 }

@@ -7,39 +7,14 @@
                 <th>カテゴリ</th>
                 <th>値段</th>
             </tr>
-            <tr>
-                <td>xxx</td>
-                <td>xxx</td>
-                <td>
-                    <select name="" id="">
-                        <option value="food">食費</option>
-                        <option value="lifestyle">生活費</option>
-                    </select>
-                </td>
-                <td>xxx</td>
-            </tr>
-            <tr>
-                <td>xxx</td>
-                <td>xxx</td>
-                <td>
-                    <select name="" id="">
-                        <option value="food">食費</option>
-                        <option value="lifestyle">生活費</option>
-                    </select>
-                </td>
-                <td>xxx</td>
-            </tr>
-            <tr>
-                <td>xxx</td>
-                <td>xxx</td>
-                <td>
-                    <select name="" id="">
-                        <option value="food">食費</option>
-                        <option value="lifestyle">生活費</option>
-                    </select>
-                </td>
-                <td>xxx</td>
-            </tr>
+            <% for (let history of histories) { %> 
+                <tr>
+                    <td><%=history.month%>/<%= history.day %> </td>
+                    <td><%=history.content%></td>
+                    <td><%=history.category%></td>
+                    <td><%=history.price%></td>
+                </tr>
+            <% } %> 
         </table>
         <canvas id="mycanvas"></canvas>
     </div>

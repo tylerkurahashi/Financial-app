@@ -1,7 +1,7 @@
 <header>
     <div class="container header__inner">
-        <a href="/<%= (Number(month) - 1) %> ">⇦前月</a>
-        <h2>家計簿アプリ <%= month %>月分 (2021) </h2>
-        <a href="/<%= (Number(month) + 1) %> ">次月⇨</a>
+        <a href="/<%= Number(year) %>-<%= (Number(month) - 1) %> ">⇦前月</a>
+        <h2>家計簿アプリ <%= month %>月分 (<%= year %> ) </h2>
+        <a href="/<%= Number(year) %>-<%= (Number(month) + 1) %> ">次月⇨</a>
     </div>
 </header>

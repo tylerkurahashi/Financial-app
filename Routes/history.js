@@ -16,11 +16,16 @@ const validateHistory = (req, res, next) => {
     }
 }
 
-router.get('/:month', catchAsync(async (req, res) => {
+router.get('/:year-:month', catchAsync(async (req, res) => {
+    const year = req.params.year
     const month = req.params.month
     const histories = await History.find({'month':month});
     console.log(histories)
-    res.render('home', { month, histories })
+    res.render('home', { month, year, histories })
 }));
+
+router.post('/:month', validateHistory, catchAsync(async (req, res) => {
+
+}))
 
 module.exports = router;

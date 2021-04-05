@@ -67,58 +67,67 @@ body {
         margin-bottom: 20px;
 
         .table-wrapper {
+            max-height: 250px;
+            overflow: auto;
+            margin-bottom: 30px;
 
             table {
                 margin-left: auto;
                 margin-right: auto;
-                border-spacing: 10px 5px;
+                // border-spacing: 10px 5px;
                 position: relative;
-                // border-collapse: collapse;
                 text-align: center;
-                font-size: 10px;
+                font-size: 11px;
                 margin-bottom: 30px;
                 overflow: auto;
-                // table-layout: fixed;
-                // height: 300px;
-                // width: 400px;
+                width: 100%;
+                max-width: 450px;
+                border-collapse: separate;
+                border: 0px;
                 
                 thead {
-                    display: block;
-
                     tr {
                         th {
                             position: sticky;
                             top: 0;
-                            z-index: 1;
-                            width: 40px;
+                            z-index: 100;
+                            background-color: rgb(253, 245, 173);
+                            display: inline-block;
+                            width: 20%;
                             word-break: break-all;
-                            padding: 0 5px 5px 5px;
+                            padding: 5px 5px 5px 5px;
+
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                top: -1px;
+                                left: -1px;
+                                width: 100%;
+                                height: 100%;
+                                border: 1px solid rgb(253, 245, 173);
+                              }
                         }
 
                         th:nth-child(2) {
-                            width: 100px;
+                            width: 25%;
                         }
                     }
                 }
 
                 tbody {
-                    display: block;
-                    overflow-y: scroll;
-                    height: 200px;
-
                     tr {    
                         td {
-                            width: 40px;
+                            display: inline-block;
+                            width: 20%;
                             word-break: break-all;
                             padding: 0 5px 5px 5px;
                         }
         
                         td:nth-child(2) {
-                            width: 100px;
+                            width: 25%;
                         }
                     }
                 }
-                
             }
         }
             
@@ -167,6 +176,7 @@ body {
             height: 150px;
             width: 150px;
             margin-bottom: 20px;
+            z-index: 3;
             
         }
     }

@@ -1,22 +1,28 @@
 <section class="container main__inner">
     <div class="main__table__contents">
         <canvas id="mycanvas"></canvas>
-        <table>
-            <tr>
-                <th>Date</th>
-                <th>Content</th>
-                <th>Category</th>
-                <th>Price</th>
-            </tr>
-            <% for (let history of histories) { %> 
-                <tr>
-                    <td><%=history.month%>/<%= history.day %> </td>
-                    <td><%=history.content%></td>
-                    <td><%=history.category%></td>
-                    <td><%=history.price%></td>
-                </tr>
-            <% } %> 
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Content</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let history of histories) { %> 
+                        <tr>
+                            <td><%=history.month%>/<%= history.day %> </td>
+                            <td><%=history.content%></td>
+                            <td><%=history.category%></td>
+                            <td><%=history.price%></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
         <form action="<%=year%>-<%=month%>" method="POST">
             <div class="form-inputs">
                 <label for="day">Day</label>

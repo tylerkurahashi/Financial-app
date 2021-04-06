@@ -67,7 +67,7 @@ body {
 }
 
 .main__inner .main__table__contents .table-wrapper {
-  max-height: 250px;
+  max-height: 150px;
   overflow: auto;
   margin-bottom: 30px;
 }

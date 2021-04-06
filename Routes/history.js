@@ -32,6 +32,9 @@ router.post('/:year-:month', catchAsync(async (req, res) => {
     req.body.history.year = year
     const histories = new History(req.body.history)
     await histories.save()
+
+
+    
     res.redirect('/'+year+'-'+month)
 }))
 

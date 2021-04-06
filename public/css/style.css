@@ -173,7 +173,7 @@ body {
 
 .main__inner .main__contents {
   text-align: center;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .main__inner .main__contents .main__flex__calc {
@@ -186,4 +186,12 @@ body {
           justify-content: space-between;
   margin-right: auto;
   margin-left: auto;
+}
+
+.main__inner .main__contents .main__flex__calc .main__flex__calc__elements h2 {
+  font-size: 12px;
+}
+
+.main__inner .main__contents .main__flex__calc .main__flex__calc__elements span {
+  font-size: 13px;
 }

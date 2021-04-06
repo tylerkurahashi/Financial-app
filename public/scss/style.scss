@@ -183,7 +183,7 @@ body {
 
     .main__contents {
         text-align: center;
-        font-size: 10px;
+        font-size: 11px;
 
         .main__flex__calc {
             display: flex;
@@ -192,6 +192,14 @@ body {
             margin-right: auto;
             margin-left: auto;
             
+            .main__flex__calc__elements {
+                h2 {
+                    font-size: 12px;
+                }
+                span {
+                    font-size: 13px;
+                }
+            }
         }
     }
 }

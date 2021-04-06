@@ -5,12 +5,22 @@ const Schema = mongoose.Schema;
 const SumSchema = new Schema({
     year: Number,
     month: Number,
-    income: Number,
-    food: Number,
-    lifestyle: String,
-    daily: String,
-    others: Number,
-    savings: Number
+    Food: {
+        type: Number,
+        default: 0
+    },
+    Lifestyle: {
+        type: Number,
+        default: 0
+    },
+    Daily: {
+        type: Number,
+        default: 0
+    },
+    Others: {
+        type: Number,
+        default: 0
+    }
 });
 
 // HistorySchema.post('findOneAndDelete', async function (doc) {

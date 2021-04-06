@@ -20,21 +20,37 @@ const validateHistory = (req, res, next) => {
 router.get('/:year-:month', catchAsync(async (req, res) => {
     const year = req.params.year
     const month = req.params.month
-    const histories = await History.find({'month':month});
+    const histories = await History.find({'year':year,'month':month});
+    const sums = await Sum.find({'year':year,'month':month})
     console.log(histories)
-    res.render('home', { month, year, histories })
+    console.log(sums)
+    res.render('home', { month, year, histories, sums })
 }));
 
 router.post('/:year-:month', catchAsync(async (req, res) => {
+    // Setting the parameter
     const year = req.params.year
     const month = req.params.month
+    const category = req.body.history.category
+    const price = req.body.history.price
     req.body.history.month = month
     req.body.history.year = year
+
     const histories = new History(req.body.history)
     await histories.save()
 
 
-    
+    const sums = await Sum.find({year:year,month:month})
+    console.log(sums.length)
+    console.log(category)
+    console.log(sums[category])
+    if (sums.length == 0) {
+        const newSum = new Sum({'year':year, "month":month, [category]: price});
+        await newSum.save();
+    } else {
+        await Sum.findOneAndUpdate({month:month},{[category]:Number(sums[0][category]) + Number(price)})
+    }
+
     res.redirect('/'+year+'-'+month)
 }))
 

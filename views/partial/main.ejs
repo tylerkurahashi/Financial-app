@@ -5,6 +5,28 @@
             <table>
                 <thead>
                     <tr>
+                        <th>Food</th>
+                        <th>Lifestyle</th>
+                        <th>Daily</th>
+                        <th>Others</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let sum of sums) { %> 
+                        <tr>
+                            <td><%=sum.Food%> </td>
+                            <td><%=sum.Lifestyle%></td>
+                            <td><%=sum.Daily%></td>
+                            <td><%=sum.Others%></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
                         <th>Date</th>
                         <th>Content</th>
                         <th>Category</th>

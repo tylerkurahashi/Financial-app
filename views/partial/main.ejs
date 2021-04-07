@@ -14,10 +14,10 @@
                 <tbody>
                     <% for (let sum of sums) { %> 
                         <tr>
-                            <td><%=sum.Food%> </td>
-                            <td><%=sum.Lifestyle%></td>
-                            <td><%=sum.Daily%></td>
-                            <td><%=sum.Others%></td>
+                            <td class=sum_food><%=sum.Food%> </td>
+                            <td class=sum_lifestyle><%=sum.Lifestyle%></td>
+                            <td class=sum_daily><%=sum.Daily%></td>
+                            <td class=sum_others><%=sum.Others%></td>
                         </tr>
                     <% } %>
                 </tbody>
@@ -84,7 +84,9 @@
             </div>
             <div class="main__flex__calc__elements">
                 <h2>支出</h2>
-                <span>10000 ￥</span>
+                <% for (let sum of sums) { %> 
+                    <span><%=sum.Food+sum.Lifestyle+sum.Daily+sum.Others%> ￥</span>
+                <% } %> 
             </div>
             <div class="main__flex__calc__elements">
                 <h2>-</h2>

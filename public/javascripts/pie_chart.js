@@ -27,7 +27,7 @@ let data = [
     {
     value:Number(other),
     color: "blue",
-    highlight: "#FD4853",
+    highlight: "rgb(75, 75, 255)",
     label: "Others"
     }
    ];

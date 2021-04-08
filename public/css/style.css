@@ -79,7 +79,7 @@ body {
   text-align: center;
   font-size: 11px;
   margin-bottom: 30px;
-  overflow: auto;
+  overflow: hidden;
   width: 100%;
   max-width: 450px;
   border-collapse: separate;
@@ -186,6 +186,7 @@ body {
           justify-content: space-between;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 30px;
 }
 
 .main__inner .main__contents .main__flex__calc .main__flex__calc__elements h2 {
@@ -194,4 +195,10 @@ body {
 
 .main__inner .main__contents .main__flex__calc .main__flex__calc__elements span {
   font-size: 13px;
+}
+
+.main__inner .main__contents form .income__input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 11px;
 }

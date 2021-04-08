@@ -92,10 +92,16 @@
                 <h2>-</h2>
             </div>
             <div class="main__flex__calc__elements">
-                <h2>繰越金</h2>
+                <h2>差し引き</h2>
                 <span>10000 ￥</span>
             </div>
         </div>
-        
+        <form action="<%=year%>-<%=month%>/income" method="POST">
+            <h2>収入の記入</h2>
+            <div class="income__input">
+                <input type="text" name="income"><span>￥</span>
+            </div>
+            <button>確定</button>            
+        </form>
     </div>
 </section>

@@ -66,6 +66,7 @@ body {
         display: block;
         margin-bottom: 20px;
 
+        
         .table-wrapper {
             max-height: 150px;
             overflow: auto;
@@ -79,7 +80,7 @@ body {
                 text-align: center;
                 font-size: 11px;
                 margin-bottom: 30px;
-                overflow: auto;
+                overflow: hidden;
                 width: 100%;
                 max-width: 450px;
                 border-collapse: separate;
@@ -191,6 +192,7 @@ body {
             justify-content: space-between;
             margin-right: auto;
             margin-left: auto;
+            margin-bottom: 30px;
             
             .main__flex__calc__elements {
                 h2 {
@@ -199,6 +201,15 @@ body {
                 span {
                     font-size: 13px;
                 }
+            }
+        }
+
+        form {
+            .income__input {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                padding-left: 11px;
+                
             }
         }
     }

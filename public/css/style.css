@@ -79,7 +79,7 @@ body {
   text-align: center;
   font-size: 11px;
   margin-bottom: 30px;
-  overflow: hidden;
+  overflow: scroll;
   width: 100%;
   max-width: 450px;
   border-collapse: separate;

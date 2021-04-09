@@ -45,9 +45,25 @@ router.post('/:year-:month', catchAsync(async (req, res) => {
         const newSum = new Sum({'year': year, "month": month, [category]: price});
         await newSum.save();
     } else {
-        await Sum.findOneAndUpdate({month: month},{[category]: Number(sums[0][category]) + Number(price)})
+        await Sum.findOneAndUpdate({year: year, month: month},{[category]: Number(sums[0][category]) + Number(price)})
     }
 
+    res.redirect('/' + year + '-' + month)
+}));
+
+router.post('/:year-:month/income', catchAsync(async (req, res) => {
+    const year = req.params.year
+    const month = req.params.month
+    const income = req.body.income
+
+    const sums = await Sum.find({year: year, month: month})
+
+    if (sums.length == 0) {
+        const newSum = new Sum({'year': year, "month": month, income: income});
+        await newSum.save();
+    } else {
+        await Sum.findOneAndUpdate({year: year, month: month},{Income: Number(income)})
+    }
     res.redirect('/' + year + '-' + month)
 }))
 

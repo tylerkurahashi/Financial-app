@@ -197,6 +197,10 @@ body {
   font-size: 13px;
 }
 
+.main__inner .main__contents .main__flex__calc .main__flex__calc__elements span.red {
+  color: red;
+}
+
 .main__inner .main__contents form .income__input {
   margin-top: 5px;
   margin-bottom: 5px;

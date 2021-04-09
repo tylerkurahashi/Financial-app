@@ -77,7 +77,9 @@
         <div class="main__flex__calc">
             <div class="main__flex__calc__elements">
                 <h2>収入</h2>
-                <span>10000 ￥</span>
+                <% for (let sum of sums) { %> 
+                    <span><%=sum.Income%> ￥</span>
+                <% } %> 
             </div>
             <div class="main__flex__calc__elements">
                 <h2>-</h2>
@@ -93,7 +95,13 @@
             </div>
             <div class="main__flex__calc__elements">
                 <h2>差し引き</h2>
-                <span>10000 ￥</span>
+                <% for (let sum of sums) { %> 
+                   <% if (sum.Income-(sum.Food+sum.Lifestyle+sum.Daily+sum.Others) >= 0) { %>  
+                        <span><%=sum.Income-(sum.Food+sum.Lifestyle+sum.Daily+sum.Others)%> ￥</span>
+                    <% } else { %> 
+                        <span class="red"><%=sum.Income-(sum.Food+sum.Lifestyle+sum.Daily+sum.Others)%> ￥</span>
+                    <% } %> 
+                <% } %> 
             </div>
         </div>
         <form action="<%=year%>-<%=month%>/income" method="POST">

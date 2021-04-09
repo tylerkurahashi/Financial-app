@@ -24,10 +24,6 @@ const SumSchema = new Schema({
     Income: {
         type: Number,
         default: 0
-    },
-    Saving: {
-        type: Number,
-        default: 0
     }
 });
 

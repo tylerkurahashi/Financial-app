@@ -17,6 +17,17 @@ const validateHistory = (req, res, next) => {
     }
 }
 
+
+
+// wip
+// render login page
+router.get('/', async(req, res) => {
+    res.render('home')
+})
+
+
+
+
 router.get('/:year-:month', catchAsync(async (req, res) => {
     const year = req.params.year
     const month = req.params.month

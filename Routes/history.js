@@ -35,7 +35,7 @@ router.get('/:year-:month', catchAsync(async (req, res) => {
     const sums = await Sum.find({'year': year,'month': month})
     console.log(histories)
     console.log(sums)
-    res.render('home', { month, year, histories, sums })
+    res.render('history', { month, year, histories, sums })
 }));
 
 router.post('/:year-:month', catchAsync(async (req, res) => {
